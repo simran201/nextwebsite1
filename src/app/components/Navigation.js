@@ -13,6 +13,9 @@ export default function Navigation() {
                 <Link href="/about"className=" nav-link">About</Link>
             </li>
             <li className="navbaritem">
+                <Link href="/skills"className=" nav-link">Skills</Link>
+            </li>
+            <li className="navbaritem">
                 <Link href="/projects"className=" nav-link">Projects</Link>
             </li>
             <li className="navbaritem">

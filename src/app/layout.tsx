@@ -5,6 +5,7 @@ import About from "./about/page";
 import Navigation from "../app/components/Navigation"
 import  Header  from "../app/components/Header"
 const inter = Inter({ subsets: ["latin"] });
+import ThemeProvider from "../app/context/ThemeContext"
 
 export const metadata: Metadata = {
   title: "portfolio",
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ThemeProvider> 
         <Header />
         {children}
+        </ThemeProvider>
         </body>
+
     </html>
   );
 }

@@ -4,11 +4,9 @@ import Html from "../../../public/assets/html.png";
 import Css from "../../../public/assets/css.png";
 import Javascript from "../../../public/assets/javascript.png";
 import ReactImg from "../../../public/assets/react.png";
-import Tailwind from "../../../public/assets/Tailwind.png";
+import Tailwind from "../../../public/assets/tailwind.png";
 import Github from "../../../public/assets/github1.png";
-import NextJS from "../../../public/assets/NextJS.png";
-import Firebase from "../../../public/assets/Firebase.png";
-import AWS from "../public/assets/skills/aws.png";
+import NextJS from "../../../public/assets/nextjs.png";
 
 const Skills = () => {
   return (

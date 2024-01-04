@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <header className="main-header  d-flex justify-content-between">
-        <div className="navbar-brand">
+        <div className="navbar-brand main-logo">
           <Link href="/">
             <Image src={Simran} alt="logo" width={90} height={70} />
           </Link>

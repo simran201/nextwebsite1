@@ -3,26 +3,35 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { ThemeContext } from "../context/ThemeContext";
+
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { IoIosMenu, IoIosRemove } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
+
 export default function Navigation() {
-  const { switchDark, switchLight, theme } = useContext(ThemeContext);
   const [isMenuOpen, setMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const { switchDark, switchLight, theme } = useContext(ThemeContext);
+
   return (
     <>
-      <nav className="main-navbar d-flex">
-        <div className="d-flex">
-          {/* Toggle Button */}
-          <div className="toggle-menu" onClick={toggleMenu}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </div>
-
-          {/* Navigation Links */}
-          <ul className={`navbarlist d-flex ${isMenuOpen ? "show-menu" : ""}`}>
+      <Navbar
+        expand="lg"
+        className={` ${
+          isMenuOpen ? "full-page-menu" : ""
+        } sticky-top px-0 py-0`}
+      >
+        <Navbar.Toggle onClick={toggleMenu} aria-controls="basic-navbar-nav">
+          {isMenuOpen ? <IoIosMenu /> : <RxCross1 />}
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav" className="mobile-menu">
+          <ul className="navbar-menu bg-transparent navbar-mobile-menu fs-17 pb-20 pt-20">
             <li className="navbaritem">
               <Link href="/" className="nav-link" onClick={toggleMenu}>
                 Home
@@ -48,15 +57,17 @@ export default function Navigation() {
                 Contact
               </Link>
             </li>
+            <li>
+              <button
+                className="themebtns"
+                onClick={theme === "light" ? switchDark : switchLight}
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
+            </li>
           </ul>
-          <button
-            className="themebtns"
-            onClick={theme === "light" ? switchDark : switchLight}
-          >
-            {theme === "dark" ? "☀️" : "🌙"}
-          </button>
-        </div>
-      </nav>
+        </Navbar.Collapse>
+      </Navbar>
     </>
   );
 }

@@ -11,10 +11,10 @@ export default function Home(props: any) {
             <div className=" flex justify-center items-center">
               <div>
                 <p className="uppercase text-sm tracking-widset category-heading">
-                  LET'S BUILD SOMETHING TOGETHER
+                  LETS BUILD SOMETHING TOGETHER
                 </p>
                 <h1 className=" text-gray-700">
-                  Hi, I'm <span className="text-[#5651e5]">Simran Jaiswal</span>
+                  Hi, Im <span className="text-[#5651e5]">Simran Jaiswal</span>
                 </h1>
                 <h4 className="category-heading">A Frontend Developer</h4>
                 <p className=" px-5 text-gray-600 max-w[70%] m-auto">

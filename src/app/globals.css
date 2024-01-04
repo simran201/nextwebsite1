@@ -181,3 +181,6 @@ p {
   background-color: black !important;
   color: white !important;
 }
+.anim{
+  transition: 1s all ease;
+}
